@@ -7,3 +7,18 @@ ul > li {
   
   vw, vh는 가로나 세로의 1/100기준으로 크기 조절
 */
+
+ul {
+  list-style: none;
+  padding: 0;
+}
+
+li {
+  padding: 8px;
+  border: 1px solid #ddd;
+  margin-bottom: 5px;
+}
+
+.collapsed {
+  display: none;
+}

@@ -7,38 +7,53 @@
 
     <!-- 인라인이랑 외부랑 누가 나중에 적용되냐에 따라 다른듯. -->
     <style>
-      p {
+      ol li {
         color: blue;
       }
     </style>
-    <link rel="stylesheet" href="../style/style.css" />
+    <link rel="stylesheet" href="./style/style.css" />
   </head>
   <body>
-    <h1>오늘의 할일</h1>
+    <h1>春风</h1>
+    <p>
+      봄바람에 꽃이 지는 것에 대한<br />
+      연민의 정이 있다면,<br />
+      내가 다시 소년이 되는 것을 허락해줄까<br /><br />
+      春风若有怜悯之心 <br />可否允许我再成为少年 <br /><br />
+      If the spring breeze takes pity on the flowers, <br />
+      am i allowed to be young again?<br /><br />
+    </p>
+
+    <img src="..\image\theshy.jpg" alt="image" height="400" />
+
+    <h2>The shy</h2>
+
     <ul>
-      <li>고양이 목욕 시키기</li>
-      <li>운동하기</li>
-      <li>숙제하기</li>
+      <li>
+        선수소개
+        <ul class="collapsed">
+          <li>강승록</li>
+          <li>Subitem 1.2</li>
+          <li>Subitem 1.3</li>
+        </ul>
+      </li>
+      <li>
+        선수경력
+        <ul class="collapsed">
+          <li>탑라이너</li>
+          <li>Subitem 2.2</li>
+          <li>Subitem 2.3</li>
+        </ul>
+      </li>
+      <li>
+        Item 3
+        <ul class="collapsed">
+          <li>Subitem 3.1</li>
+          <li>Subitem 3.2</li>
+          <li>Subitem 3.3</li>
+        </ul>
+      </li>
     </ul>
-    <!-- ol에서 type으로 넘버링 기호를 바꿀 수 있음 -->
-    <ol>
-      <li>밥먹기</li>
-      <li>잠자기</li>
-      <li>숨쉬기</li>
-    </ol>
-    <!-- dl은 ol ul이랑 방식이 다름 -->
-    <!-- dt = title  dd = data -->
-    <!-- dl은 처음 봄 -->
-    <dl>
-      <dt>라자냐</dt>
-      <dd>라자냐는 라자냐다</dd>
-      <dt>라면</dt>
-      <dd>라면은 맛있다</dd>
-    </dl>
-    <!-- 이 방법이 제일 우선인가봐
-    이게 내부스타일 인데,
-    react인가 nest.js할 때 이런 식으로 했던 거 같음. -->
-    <p style="color: green">색깔테스트</p>
 
     <h2>Sample Table</h2>
 
@@ -68,5 +83,17 @@
         </tr>
       </tbody>
     </table>
+
+    <script>
+      // JavaScript to toggle the "collapsed" class
+      document.querySelectorAll("li").forEach(function (li) {
+        li.addEventListener("click", function () {
+          const ul = this.querySelector("ul");
+          if (ul) {
+            ul.classList.toggle("collapsed");
+          }
+        });
+      });
+    </script>
   </body>
 </html>
